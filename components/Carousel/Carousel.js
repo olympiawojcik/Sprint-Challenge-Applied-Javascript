@@ -21,25 +21,43 @@ class Carousel {
     //set image at new index to display:block
 
     cycleLeft() {
-        console.log('left cycle')
         this.imgList[this.index].style.display = 'none';
+        //index can't be negative one, it has to loop fully through. so if index is zero, then set the index
+        //equal to the LAST photo in the imgList collect. That means we need its length!
 
+        if (this.index === 0) {
+            this.index = this.imgList.length-1
+        } else {
+            //else set the index equal to this.index minus one (or decrement)
+            this.index--;
+        }
+        //set image at new index to display:block
+        this.imgList[this.index].style.display = 'block';
     }
 
     cycleRight () {
-        console.log('right cycle')
         this.imgList[this.index].style.display = 'none';
+        
+        //index has to be 0, 1, 2, or 3. SO if we are on image index 3, set the index equal to 0 or first photo in collection
+        if (this.index === this.imgList.length-1) {
+            this.index = 0;
+        } else {
+            //else set the index equal to this.index plus one (add)
+            this.index ++;
+        }
+        this.imgList[this.index].style.display = 'block';
     } 
-}
+} /* -----------CAROUSEL CLASS -----------------*/
 
-class Card {
-    constructor(img) {
-        this.img = img;
-    }
-    select() {
 
-    }
-}
+// class Card {
+//     constructor(img) {
+//         this.img = img;
+//     }
+//     select() {
+
+//     }
+// } /* -----------CARD CLASS -----------------*/
 // let carousel = document.querySelector();
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
