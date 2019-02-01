@@ -32,20 +32,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model (DOM) is an object representation of the HTML elements/CSS content of a web page. It is *NOT* the HTML source code you a writing itself; it's a representation of it. The HTML source code written gets parsed by the browser and turned into the DOM that gets rendered to the screen.
+
 2. What is an event?
+
+An event is any interaction a user has with a website - this includes everything from clicks, moving a mouse, scrolling the page, and pressing a keyboard.
 
 3. What is an event listener?
 
+An event listener is a method, .addEventListener() we can add to an element to listen to specific events. When that event occurs, our method runs a callback function.
+
 4. Why would we convert a NodeList into an Array?
+
+Nodelist is an array-like object that has a numerical zero-based index and the length property. NodeList also has access to .forEach() array method, but none others. Thus, we would convert NodeList to an Array if we need advanced array methods like .reduce or .map. Nodelist 
 
 5. What is a component?
 
+A component is a reusable piece of code that can be used to built elements which share functionality and styling. It's made of several parts: HTMl, CSS, and Javascript.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [X] Fork the project into your GitHub user account
+* [X] Clone the forked project into a directory on your machine
+* [X] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [X] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
